@@ -1,0 +1,11 @@
+.tests
+doc/tags
+debug
+.repro
+*.log
+data
+.neoconf.json
+*.bak
+lazy-lock.json
+tags
+
