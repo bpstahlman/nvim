@@ -11,6 +11,14 @@ return {
 		triggers = {
 			{ "<auto>", mode = "nixsotc" },
 		},
+    -- Don't display popup as soon as visual mode is entered.
+    -- TODO: Decide about operator-pending mode...
+    defer = function(ctx)
+      --if vim.list_contains({ "d", "y" }, ctx.operator) then
+      --  return true
+      --end
+      return vim.list_contains({ "<C-V>", "V", "v" }, ctx.mode)
+    end,
   },
   keys = {
     {

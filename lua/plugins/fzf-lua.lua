@@ -8,8 +8,7 @@ return {
 		-- Files
 		-- TODO: Consider a distinct "Buffer" group that uses <leader>b for stuff like
 		-- buffers(), blines(), etc...
-		-- Design Choice: Leave <A-b> for Hop/EasyMotion.
-		{ "<A-l>", function() require "fzf-lua".buffers() end,
+		{ "<A-b>", function() require "fzf-lua".buffers() end,
       mode = "n", desc = 'buffers' },
 		{ "<leader>fb", function() require "fzf-lua".buffers() end,
       mode = "n", desc = 'open buffers' },
@@ -18,7 +17,7 @@ return {
       mode = "n", desc = 'files' },
 		{ "<leader>ff", function() require "fzf-lua".files() end,
       mode = "n", desc = 'files' },
-		{ "<leader>fo", function() reuire "fzf-lua".oldfiles() end,
+		{ "<leader>fo", function() require "fzf-lua".oldfiles() end,
       mode = "n", desc = 'old files' },
 		{ "<leader>fq", function() require "fzf-lua".quickfix() end,
       mode = "n", desc = 'quickfix list' },
@@ -52,8 +51,6 @@ return {
 		{ "<leader>s*", function() require "fzf-lua".live_grep_glob() end,
       mode = "n", desc = 'live grep with rg --glob support' },
 		-- Tags / Treesitter
-		{ "<A-t>", function() require "fzf-lua".treesitter() end,
-      mode = "n", desc = 'current buffer treesitter symbols' },
 		{ "<leader>tt", function() require "fzf-lua".treesitter() end,
       mode = "n", desc = 'current buffer treesitter symbols' },
 		{ "<leader>t]", function() require "fzf-lua".tags() end,

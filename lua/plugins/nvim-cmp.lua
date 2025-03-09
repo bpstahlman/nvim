@@ -61,13 +61,20 @@ return {
         -- documentation = cmp.config.window.bordered(),
       },
       mapping = cmp.mapping.preset.insert({
+        -- Important Note: The following 2 maps are essential to ensure fallback to builtin
+        -- <c-n>/<c-p> when there are no LSP completions. I think this is supposed to be
+        -- in the recommended config, but isn't yet (02Mar2025).
+        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        --['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
       }),
+      --[[
+      --]]
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'vsnip' }, -- For vsnip users.
@@ -75,7 +82,8 @@ return {
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
       } , {
-        { name = 'buffer' },
+        -- I find this one kind of annoying - too busy...
+        --{ name = 'buffer' },
       })
     })
 

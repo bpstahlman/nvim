@@ -1,22 +1,24 @@
 -- Load some mini plugins.
 
+-- TODO: Remove this if I end up not using in favor of treesitter-aware variants.
 -- Quickly move line or visual selection left/down/up/right with <A-h/j/k/l> maps.
+--[[
 require'mini.move'.setup{
   -- Module mappings. Use `''` (empty string) to disable one.
   mappings = {
     -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl, but I want to
     -- keep the Meta mappings for more frequently used stuff.
     -- TODO: Would this be good use case for a hydra?
-    left = '<C-h>',
-    right = '<C-l>',
-    down = '<C-j>',
-    up = '<C-k>',
+    left = '<A-h>',
+    right = '<A-l>',
+    down = '<A-j>',
+    up = '<A-k>',
 
     -- Move current line in Normal mode
-    line_left = '<C-h>',
-    line_right = '<C-l>',
-    line_down = '<C-j>',
-    line_up = '<C-k>',
+    line_left = '<A-h>',
+    line_right = '<A-l>',
+    line_down = '<A-j>',
+    line_up = '<A-k>',
   },
 
   -- Options which control moving behavior
@@ -25,6 +27,7 @@ require'mini.move'.setup{
     reindent_linewise = true,
   },
 }
+--]]
 -- Note: Plugins like which-key want this, but will load it themselves.
 --require'mini.icons'.setup()
 
