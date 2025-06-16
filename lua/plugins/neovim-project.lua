@@ -12,6 +12,9 @@ return {
     projects = { -- define project roots
 			-- Projects compiled from source
 			"~/src/*",
+			-- treeclimber
+			"~/.config/nvim/pack/dkendal/opt/nvim-treeclimber/",
+			"~/.config/nvim/pack/bpstahlman/opt/vim-sexp/",
       -- Personal config
       "~/.config/nvim",
       -- Plugins downloaded by lazy

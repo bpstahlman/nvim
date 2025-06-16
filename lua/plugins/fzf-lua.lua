@@ -8,7 +8,7 @@ return {
 		-- Files
 		-- TODO: Consider a distinct "Buffer" group that uses <leader>b for stuff like
 		-- buffers(), blines(), etc...
-		{ "<A-b>", function() require "fzf-lua".buffers() end,
+		{ "<A-l>", function() require "fzf-lua".buffers() end,
       mode = "n", desc = 'buffers' },
 		{ "<leader>fb", function() require "fzf-lua".buffers() end,
       mode = "n", desc = 'open buffers' },

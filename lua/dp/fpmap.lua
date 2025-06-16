@@ -17,7 +17,6 @@ function M.get(name)
       return nil
     end
     fps[name] = fp
-    print(fp, fps[name])
   end
   return fps[name]
 end

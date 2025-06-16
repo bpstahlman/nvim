@@ -1,6 +1,7 @@
 
 -- Add more convenient keymaps than the <leader>-based ones for the most frequently used fzf-lua maps.
 
+--[[
 local wk = require("which-key")
 wk.add{
 	{
@@ -20,3 +21,4 @@ wk.add{
 	},
 }
 
+--]]

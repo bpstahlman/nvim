@@ -31,6 +31,10 @@ require("config.lazy")
 -- vim colorscheme seems nice. TODO: More investigation...
 vim.cmd.colorscheme "tokyonight-day"
 
+-- Note: This isn't needed now that I'm having Lazy load it.
+--vim.go.packpath = "~/.config/nvim"
+--vim.cmd.source "~/.config/nvim/vim-sexp-config.vim"
+--vim.cmd.packadd "vim-sexp"
 
 --  vim:ts=4:sw=4:noet:si:ai:tw=90
 
